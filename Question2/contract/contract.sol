@@ -37,7 +37,7 @@ contract Card is Verifier{
                 verifyProof(_a, _b, _c, _proofInput),
                 "Failed move proof check"
             );
-            require(suithash[msg.sender] == _proofInput[1]);
+            require(suithash[msg.sender] == _proofInput[1], "New input suit doesn't match the previous suit");
             hash[msg.sender].push(_proofInput[0]);
             return true;
             }

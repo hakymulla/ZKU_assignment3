@@ -23,7 +23,7 @@ uint get_number_of_components() {return 5;}
 
 uint get_size_of_input_hashmap() {return 256;}
 
-uint get_size_of_witness() {return 1323;}
+uint get_size_of_witness() {return 666;}
 
 uint get_size_of_constants() {return 439;}
 
@@ -1675,7 +1675,7 @@ aux_cmp_num += 2;
 {
 PFrElement aux_dest = &signalValues[mySignalStart + 3];
 // load src
-Fr_div(&expaux[0],&signalValues[mySignalStart + 2],&circuitConstants[27]); // line circom 14
+Fr_idiv(&expaux[0],&signalValues[mySignalStart + 2],&circuitConstants[27]); // line circom 14
 // end load src
 Fr_copy(aux_dest,&expaux[0]);
 }
@@ -1735,7 +1735,7 @@ MiMCSponge_1_run(mySubcomponents[cmp_index_ref],ctx);
 PFrElement aux_dest = &signalValues[mySignalStart + 1];
 // load src
 // end load src
-Fr_copy(aux_dest,&ctx->signalValues[ctx->componentMemory[mySubcomponents[0]].signalStart + 0]);
+Fr_copy(aux_dest,&ctx->signalValues[ctx->componentMemory[mySubcomponents[1]].signalStart + 0]);
 }
 }
 

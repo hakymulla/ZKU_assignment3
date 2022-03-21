@@ -11,7 +11,7 @@ template Main(){
 
     signal suit;
 
-    suit <== card / 13;
+    suit <== card \ 13;
 
     component mimc = MiMCSponge(1, 220, 1);
     component mimc1 = MiMCSponge(1, 220, 1);
@@ -22,7 +22,7 @@ template Main(){
 
     mimc1.ins[0] <== suit;
     mimc1.k <== 0;
-    suithash <== mimc.outs[0];
+    suithash <== mimc1.outs[0];
 
 }
 
