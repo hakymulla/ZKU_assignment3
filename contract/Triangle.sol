@@ -11,7 +11,7 @@ contract Traingle is Verifier{
             uint[2][2] memory _b,
             uint[2] memory _c,
             uint[1] memory _proofInput) 
-            public view returns (uint[1] memory) 
+            public view returns (bool) 
             {
             require(
                 verifyProof(_a, _b, _c, _proofInput),
